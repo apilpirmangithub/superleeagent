@@ -144,7 +144,6 @@ export function useRegisterIPAgent() {
 
       // 7. Mint and register IP on Story Protocol with license terms
       const client = await getClient();
-      const usedLicenseSettings = licenseSettings || DEFAULT_LICENSE_SETTINGS;
       const licenseTermsData = createLicenseTerms(usedLicenseSettings);
 
       const result = await client.ipAsset.mintAndRegisterIpAssetWithPilTerms({
